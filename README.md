@@ -1,5 +1,6 @@
 # Rust入門  
 ## Rustとは
-Rustは安全性、速度、並行性の3つにフォーカスしたシステムプログラミング言語です。ガーベジコレクタなしにこれらのゴールを実現していて、他の言語への埋め込み、要求された空間や時間内での動作、 デバイスドライバやオペレーティングシステムのような低レベルなコードなど他の言語が苦手とする多数のユースケースを得意とします。 全てのデータ競合を排除しつつも実行時オーバーヘッドのないコンパイル時の安全性検査を多数持ち、これらの領域をターゲットに置く既存の言語を改善します。 Rustは高級言語のような抽象化も含めた「ゼロコスト抽象化」も目標としています。 そうでありつつもなお低級言語のような精密な制御も許します。
+RustはMozillaによって開発されている、高速に動作し、安全性、並行性、実用性にフォーカスしたシステムプログラミング言語です。
 ## 参考ページ  
-https://rust-lang-ja.github.io/the-rust-programming-language-ja/1.6/book/README.html
+<https://rust-lang-ja.github.io/the-rust-programming-language-ja/1.6/book/README.html>  
+<https://doc.rust-lang.org/book/README.html>

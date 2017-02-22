@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>インストール · GitBook</title>
+        <title>if · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="hello.html" />
+    <link rel="next" href="loop.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="comment.html" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="install.html">
+        <li class="chapter " data-level="1.2" data-path="install.html">
             
                 <a href="install.html">
             
@@ -180,7 +180,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="if.html">
+        <li class="chapter active" data-level="1.8" data-path="if.html">
             
                 <a href="if.html">
             
@@ -262,7 +262,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >インストール</a>
+        <a href="." >if</a>
     </h1>
 </div>
 
@@ -277,17 +277,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1>
-<h2 id="linux&#x307E;&#x305F;&#x306F;mac&#x3067;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">Linux&#x307E;&#x305F;&#x306F;Mac&#x3067;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
-<pre><code>$ curl -sSf https://static.rust-lang.org/rustup.sh | sh
-</code></pre><p>&#x3053;&#x306E;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x306F;Rust&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30E9;&#x3068;&#x305D;&#x306E;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x30DE;&#x30CD;&#x30FC;&#x30B8;&#x30E3;Cargo&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3001;<code>/usr/local</code>
-&#x3078;&#x3068;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x307E;&#x3059;&#x3002;<br><code>--prefix=&lt;path&gt;</code> &#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x3067;&#x4ED6;&#x306E;&#x5834;&#x6240;&#x3078;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;
-&#x51FA;&#x6765;&#x307E;&#x3059;&#x3002;  </p>
-<p>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30E9;&#x306F;&#x300C;sudo&#x300D;&#x4E0B;&#x3067;&#x8D70;&#x308B;&#x306E;&#x3067;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x3092;&#x5C0B;&#x304D;&#x307E;&#x3059;&#x3002;&#x3082;&#x3057;&apos;sudo&apos;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x307B;&#x3057;&#x304F;&#x306A;&#x3044;&#x306A;&#x3089;
-<code>--disable-sudo</code> &#x30D5;&#x30E9;&#x30B0;&#x3092;&#x6E21;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<h2 id="windows&#x3067;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">Windows&#x3067;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
-<p>Windows&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x308B;&#x306A;&#x3089;&#x9069;&#x5207;&#x306A;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30E9;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#x4E0B;&#x3055;&#x3044;&#x3002;<br><code>https://www.rust-lang.org/en-US/</code>  </p>
-<p>&#x307E;&#x305F;link.exe&#x304C;&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3044;&#x3068;&#x304B;&#x8A00;&#x308F;&#x308C;&#x305F;&#x5834;&#x5408;&#x306F;<br><code>https://www.microsoft.com/ja-jp/download/details.aspx?id=48146</code><br>&#x304B;&#x3089;Microsoft Visual Studio Community 2015&#x3092;C++&#x306E;&#x9805;&#x76EE;&#x306B;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3092;&#x3064;&#x3051;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x307E;&#x3057;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+                                <h1 id="if">if</h1>
+<p>Rust&#x306E;&#x5F0F;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x304D;&#x307E;&#x3059;</p>
+<pre><code class="lang-Rust"><span class="hljs-keyword">let</span> x = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">if</span> x == <span class="hljs-number">5</span> {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;x &#x306F; 5 &#x3067;&#x3059;!&quot;</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> x == <span class="hljs-number">6</span> {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;x &#x306F; 6 &#x3067;&#x3059;!&quot;</span>);
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;x &#x306F; 5 &#x3067;&#x3082; 6 &#x3067;&#x3082;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&quot;</span>);
+}
+</code></pre>
+<p>Rust&#x306E;if&#x306F;&#x6587;&#x3067;&#x306F;&#x306A;&#x304F;&#x5F0F;&#x306A;&#x306E;&#x3067;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Rust"><span class="hljs-keyword">let</span> x = <span class="hljs-number">5</span>;
+
+<span class="hljs-keyword">let</span> y = <span class="hljs-keyword">if</span> x == <span class="hljs-number">5</span> {
+    <span class="hljs-number">10</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-number">15</span>
+};
+</code></pre>
+<p>&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x304F;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#xFF08;&#x305D;&#x3057;&#x3066;&#x3001;&#x5927;&#x62B5;&#x306F;&#x3053;&#x3046;&#x66F8;&#x304F;&#x3079;&#x304D;&#x3067;&#x3059;&#xFF09;:</p>
+<pre><code class="lang-Rust"><span class="hljs-keyword">let</span> x = <span class="hljs-number">5</span>;
+
+<span class="hljs-keyword">let</span> y = <span class="hljs-keyword">if</span> x == <span class="hljs-number">5</span> { <span class="hljs-number">10</span> } <span class="hljs-keyword">else</span> { <span class="hljs-number">15</span> }; <span class="hljs-comment">// y: i32</span>
+</code></pre>
+<p>if&#x5F0F;&#x306E;&#x5024;&#x306F;&#x3001;&#x9078;&#x629E;&#x3055;&#x308C;&#x305F;&#x5206;&#x5C90;&#x4E2D;&#x306E;&#x6700;&#x5F8C;&#x306E;&#x5F0F;&#x306E;&#x5024;&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002; else &#x306E;&#x306A;&#x3044; if &#x3067;&#x306F;&#x3001;&#x305D;&#x306E;&#x5024;&#x306F;&#x5E38;&#x306B; () &#x304C;&#x671F;&#x5F85;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Rust"><span class="hljs-keyword">let</span> x = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">let</span> y = <span class="hljs-keyword">if</span> x == <span class="hljs-number">1</span> { <span class="hljs-number">2</span> };&#x3000;<span class="hljs-comment">// &#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x30A8;&#x30E9;&#x30FC;</span>
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{}&quot;</span>,y);
+</code></pre>
 
                                 
                                 </section>
@@ -315,12 +334,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="comment.html" class="navigation navigation-prev " aria-label="Previous page: コメント">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="hello.html" class="navigation navigation-next " aria-label="Next page: Hello, world">
+                <a href="loop.html" class="navigation navigation-next " aria-label="Next page: ループ">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -331,7 +350,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"インストール","level":"1.2","depth":1,"next":{"title":"Hello, world","level":"1.3","depth":1,"path":"hello.md","ref":"hello.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install.md","mtime":"2017-02-18T14:49:17.534Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-22T07:45:31.499Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"if","level":"1.8","depth":1,"next":{"title":"ループ","level":"1.9","depth":1,"path":"loop.md","ref":"loop.md","articles":[]},"previous":{"title":"コメント","level":"1.7","depth":1,"path":"comment.md","ref":"comment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"if.md","mtime":"2017-02-19T10:33:17.271Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-22T07:45:31.499Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
