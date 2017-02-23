@@ -5,11 +5,8 @@ $ curl -sSf https://static.rust-lang.org/rustup.sh | sh
 ```
 このスクリプトはRustコンパイラとそのパッケージマネージャCargoをダウンロードし、`/usr/local`
 へとインストールします。  
-`--prefix=<path>` オプションを使うことで他の場所へインストール
-出来ます。  
-
-インストーラは「sudo」下で走るのでパスワードを尋きます。もし'sudo'を使ってほしくないなら
-`--disable-sudo` フラグを渡します。
+`--prefix=<path>` オプションを使うことで他の場所へインストール出来ます。  
+インストーラは「sudo」下で走る。もし'sudo'を使ってほしくないなら`--disable-sudo` を使う。
 
 ## Windowsでのインストール
 Windowsを使っているなら適切なインストーラをダウンロードして下さい。  
