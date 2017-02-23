@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./css/reset.css">
+<a class="forkme" href="https://yanokunpei.github.io/introduction_of_Rust">Fork me on GitHub</a>
 # ベクタ
 
 `ベクタ`は拡張可能な配列です、標準ライブラリ上で Vec<T> として提供されています。ベクタはデータを常にヒープ上にアロケーションします。 ベクタは`vec!`マクロを用いて作成できます:
