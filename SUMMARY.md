@@ -9,5 +9,6 @@
 * [コメント](comment.md)
 * [if](if.md)
 * [ループ](loop.md)
-* [所有権](ownership.md)
 * [ベクター](vector.md)
+* [所有権](ownership.md)
+* [借用](borrowing.md)
