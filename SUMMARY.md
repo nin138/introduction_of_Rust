@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./css/reset.css">
+<a class="forkme" href="https://yanokunpei.github.io/introduction_of_Rust">Fork me on GitHub</a>
 # Summary
 
 * [Introduction](README.md)
@@ -12,3 +14,4 @@
 * [ベクター](vector.md)
 * [所有権](ownership.md)
 * [借用](borrowing.md)
+* [ライフタイム](lifetime.md)
