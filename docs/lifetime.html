@@ -301,8 +301,168 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><link rel="stylesheet" href="./css/fork_me_ribbon.css">
-<a class="forkme" href="https://yanokunpei.github.io/introduction_of_Rust" target="_blank">Fork me on GitHub</a></p>
+                                <h1 id="&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;">&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;</h1>
+<p>&#x501F;&#x7528;&#x306F;&#x8907;&#x96D1;&#x306B;&#x306A;&#x308B;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x4E00;&#x9023;&#x306E;&#x4F5C;&#x696D;&#x3092;&#x60F3;&#x50CF;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<ol>
+<li><code>A</code>&#x304C;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3078;&#x306E;&#x30CF;&#x30F3;&#x30C9;&#x30EB;&#x3092;&#x53D6;&#x5F97;&#x3059;&#x308B;</li>
+<li><code>A</code>&#x304C;<code>B</code>&#x306B;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3078;&#x306E;&#x53C2;&#x7167;&#x3092;&#x8CB8;&#x3057;&#x4ED8;&#x3051;&#x308B;</li>
+<li><code>A</code>&#x304C;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3092;&#x4F7F;&#x3044;&#x7D42;&#x308F;&#x308A;&#x3001;&#x89E3;&#x653E;&#x3059;&#x308B;&#x304C;<code>B</code>&#x306F;&#x53C2;&#x7167;&#x3092;&#x307E;&#x3060;&#x6301;&#x3063;&#x3066;&#x3044;&#x308B;</li>
+<li><code>B</code>&#x304C;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3092;&#x4F7F;&#x3046;</li>
+</ol>
+<p><code>B</code>&#x306E;&#x53C2;&#x7167;&#x306F;&#x7121;&#x52B9;&#x306A;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3092;&#x6307;&#x793A;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002; &#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x304C;&#x30E1;&#x30E2;&#x30EA;&#x3067;&#x3042;&#x308B;&#x3068;&#x304D;&#x3001;&#x3053;&#x308C;&#x306F;&#x30C0;&#x30F3;&#x30B0;&#x30EA;&#x30F3;&#x30B0;&#x30DD;&#x30A4;&#x30F3;&#x30BF;&#x53C8;&#x306F;&#x300C;&#x89E3;&#x653E;&#x5F8C;&#x306E;&#x4F7F;&#x7528;&#x300D;&#x3068;&#x547C;&#x3070;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x3053;&#x308C;&#x3092;&#x4FEE;&#x6B63;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x306F;&#x3001;&#x30B9;&#x30C6;&#x30C3;&#x30D7;3&#x306E;&#x5F8C;&#x306B;&#x30B9;&#x30C6;&#x30C3;&#x30D7;4&#x304C;&#x7D76;&#x5BFE;&#x306B;&#x8D77;&#x3053;&#x3089;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3057;&#x306A;&#x3051;&#x308C;&#x3070;&#x306A;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;  </p>
+<pre><code class="lang-Rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">skip_prefix</span></span>(line: &amp;<span class="hljs-keyword">str</span>, prefix: &amp;<span class="hljs-keyword">str</span>) -&gt; &amp;<span class="hljs-keyword">str</span> {
+    <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-keyword">let</span> line = <span class="hljs-string">&quot;lang:en=Hello World!&quot;</span>;
+<span class="hljs-keyword">let</span> lang = <span class="hljs-string">&quot;en&quot;</span>;
+
+<span class="hljs-keyword">let</span> v;
+{
+    <span class="hljs-keyword">let</span> p = <span class="hljs-built_in">format!</span>(<span class="hljs-string">&quot;lang:{}=&quot;</span>, lang);  <span class="hljs-comment">// -+ `p` &#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x5165;&#x308B;&#x3002;</span>
+    v = skip_prefix(line, p.as_str());  <span class="hljs-comment">//  |</span>
+}                                       <span class="hljs-comment">// -+ `p` &#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x304B;&#x3089;&#x5916;&#x308C;&#x308B;&#x3002;</span>
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{}&quot;</span>, v);
+</code></pre>
+<p>&#x4E0A;&#x8A18;&#x306E;&#x4F8B;&#x3067;&#x306F;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3068;&#x3057;&#x3066;2&#x3064;&#x306E;<code>&#xFF06;str&#x53C2;&#x7167;</code>&#x3092;&#x53D6;&#x308A;&#x3001;1&#x3064;&#x306E;&#xFF06;str&#x53C2;&#x7167;&#x3092;&#x8FD4;&#x3059;&#x95A2;&#x6570;<code>skip_prefix</code>&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br><code>skip_prefix</code>&#x3092;<code>line</code>&#x3068;<code>p</code>&#x306E;&#x53C2;&#x7167;&#x3092;&#x6E21;&#x3057;&#x547C;&#x3073;&#x307E;&#x3059;(&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x304C;&#x7570;&#x306A;&#x308B;2&#x3064;&#x306E;&#x5909;&#x6570;)&#x3002;
+<code>println</code>&#x306E;&#x884C;&#x306E;&#x5B89;&#x5168;&#x6027;&#x306F;&#x3001;skip_prefix&#x95A2;&#x6570;&#x306B;&#x3088;&#x3063;&#x3066;&#x8FD4;&#x3055;&#x308C;&#x305F;&#x53C2;&#x7167;&#x304C;&#x307E;&#x3060;&#x751F;&#x304D;&#x3066;&#x3044;&#x308B;&#x304B;&#x3001;&#x65E2;&#x306B;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3055;&#x308C;&#x305F;<code>p</code>&#x3092;&#x53C2;&#x7167;&#x3059;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x306B;&#x3088;&#x3063;&#x3066;&#x6C7A;&#x307E;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x4E0A;&#x8A18;&#x306E;&#x66D6;&#x6627;&#x3055;&#x306E;&#x305F;&#x3081;&#x3001;Rust&#x306F;&#x4E0A;&#x8A18;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3092;&#x62D2;&#x5426;&#x3057;&#x307E;&#x3059;&#x3002;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30E9;&#x306B;&#x53C2;&#x7167;&#x306E;&#x5B58;&#x7D9A;&#x671F;&#x9593;&#x3092;&#x4F1D;&#x3048;&#x308B;&#x305F;&#x3081;&#x306B;&#x3001;&#x95A2;&#x6570;&#x5BA3;&#x8A00;&#x3067;&#x660E;&#x793A;&#x7684;&#x306B;<code>&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;</code>&#x3092;&#x4E0E;&#x3048;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">skip_prefix</span></span>&lt;<span class="hljs-symbol">&apos;a</span>, <span class="hljs-symbol">&apos;b</span>&gt;(line: &amp;<span class="hljs-symbol">&apos;a</span> <span class="hljs-keyword">str</span>, prefix: &amp;<span class="hljs-symbol">&apos;b</span> <span class="hljs-keyword">str</span>) -&gt; &amp;<span class="hljs-symbol">&apos;a</span> <span class="hljs-keyword">str</span> {
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<hr>
+<p><code>&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;</code>&#x3068;&#x306F;&#x53C2;&#x7167;&#x306E;&#x6709;&#x52B9;&#x306A;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x3092;&#x8A18;&#x8FF0;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;&#x5F15;&#x6570;&#x3068;&#x3057;&#x3066;&#x53C2;&#x7167;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;&#x95A2;&#x6570;&#x3067;&#x3001;&#x53C2;&#x7167;&#x306E;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x793A;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Rust"><span class="hljs-comment">// &#x9ED9;&#x793A;&#x7684;&#x306B;</span>
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">foo</span></span>(x: &amp;<span class="hljs-keyword">i32</span>) {
+}
+<span class="hljs-comment">// &#x660E;&#x793A;&#x7684;&#x306B;</span>
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">bar</span></span>&lt;<span class="hljs-symbol">&apos;a</span>&gt;(x: &amp;<span class="hljs-symbol">&apos;a</span> <span class="hljs-keyword">i32</span>) {
+}
+</code></pre>
+<p><code>&apos;a</code>&#x306F;<code>&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;a</code>&#x3068;&#x8AAD;&#x307F;&#x307E;&#x3059;&#x3002;&#x3000;&#x3000;
+&#x6280;&#x8853;&#x7684;&#x306B;&#x306F;&#x53C2;&#x7167;&#x306F;&#x5168;&#x3066;&#x305D;&#x308C;&#x306B;&#x95A2;&#x9023;&#x3059;&#x308B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x304C;&#x3001;&#x4E00;&#x822C;&#x7684;&#x306A;&#x5834;&#x5408;&#x306B;&#x306F;&#x7701;&#x7565;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-Rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">bar</span></span>&lt;<span class="hljs-symbol">&apos;a</span>&gt;(...)
+</code></pre>
+<p>&#x95A2;&#x6570;&#x540D;&#x306E;&#x5F8C;&#x306E; <code>&lt;&gt;</code> &#x306E;&#x9593;&#x306B;<code>&#x300C;&#x30B8;&#x30A7;&#x30CD;&#x30EA;&#x30C3;&#x30AF;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x300D;</code>&#x3092;&#x6301;&#x3064;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x3001;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306F;&#x305D;&#x306E;&#x4E00;&#x7A2E;&#x3067;&#x3059;&#x3002;<br><code>&lt;&apos;a&gt;</code>&#x306F;<code>bar</code>&#x304C;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;<code>&apos;a</code>&#x3092;&#x6301;&#x3064;&#x3053;&#x3068;&#x3092;&#x610F;&#x5473;&#x3057;&#x307E;&#x3059;&#x3002; &#x3082;&#x3057;2&#x3064;&#x306E;&#x53C2;&#x7167;&#x5F15;&#x6570;&#x304C;&#x3042;&#x308B;&#x5834;&#x5408;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x3051;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">bar</span></span>&lt;<span class="hljs-symbol">&apos;a</span>, <span class="hljs-symbol">&apos;b</span>&gt;(...)
+</code></pre>
+<p>&#x305D;&#x3057;&#x3066;&#x5F15;&#x6570;&#x30EA;&#x30B9;&#x30C8;&#x3067;&#x306F;&#x3001;&#x540D;&#x4ED8;&#x3051;&#x305F;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>...(x: &amp;&apos;a i32)
+&#x3082;&#x3057; &amp;mut &#x53C2;&#x7167;&#x304C;&#x6B32;&#x3057;&#x3044;&#x306E;&#x306A;&#x3089;&#x3070;&#x3001;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>...(x: &amp;&apos;a mut i32)
+&#x3082;&#x3057; &amp;mut i32 &#x3092; &amp;&apos;a mut i32 &#x3068;&#x6BD4;&#x8F03;&#x3059;&#x308B;&#x306A;&#x3089;&#x3070;&#x3001;&#x305D;&#x308C;&#x3089;&#x306F;&#x540C;&#x3058;&#x3067;&#x3059;&#x3002;&#x305D;&#x308C;&#x306F;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0; &apos;a &#x304C; &amp; &#x3068; mut i32 &#x306E;&#x9593;&#x306B;&#x3053;&#x3063;&#x305D;&#x308A;&#x5165;&#x3063;&#x3066;&#x3044;&#x308B;&#x3060;&#x3051;&#x3067;&#x3059;&#x3002; &amp;mut i32 &#x306F;&#x300C; i32 &#x3078;&#x306E;&#x30DF;&#x30E5;&#x30FC;&#x30BF;&#x30D6;&#x30EB;&#x306A;&#x53C2;&#x7167;&#x300D;&#x306E;&#x3088;&#x3046;&#x306B;&#x8AAD;&#x307F;&#x3001; &amp;&apos;a mut i32 &#x306F;&#x300C;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0; &apos;a &#x3092;&#x6301;&#x3064; i32 &#x3078;&#x306E;&#x30DF;&#x30E5;&#x30FC;&#x30BF;&#x30D6;&#x30EB;&#x306A;&#x53C2;&#x7167;&#x300D;&#x306E;&#x3088;&#x3046;&#x306B;&#x8AAD;&#x307F;&#x307E;&#x3059;&#x3002;</p>
+<p>struct &#x306E;&#x4E2D;</p>
+<p>&#x53C2;&#x7167;&#x3092;&#x542B;&#x3080; struct &#x3092;&#x4F7F;&#x3046;&#x3068;&#x304D;&#x306B;&#x3082;&#x3001;&#x660E;&#x793A;&#x7684;&#x306A;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x5FC5;&#x8981;&#x3068;&#x3059;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>struct Foo&lt;&apos;a&gt; {
+    x: &amp;&apos;a i32,
+}</p>
+<p>fn main() {
+    let y = &amp;5; // &#x3053;&#x308C;&#x306F;<code>let _y = 5; let y = &amp;_y;</code>&#x3068;&#x540C;&#x3058;
+    let f = Foo { x: y };</p>
+<pre><code>println!(&quot;{}&quot;, f.x);
+</code></pre><p>}
+&#x898B;&#x3066;&#x306E;&#x3068;&#x304A;&#x308A;&#x3001; struct &#x3082;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x6301;&#x3064;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002; &#x3053;&#x308C;&#x306F;&#x95A2;&#x6570;&#x3068;&#x540C;&#x3058;&#x65B9;&#x6CD5;&#x3067;&#x3059;&#x3002;</p>
+<p>struct Foo&lt;&apos;a&gt; {
+&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x5BA3;&#x8A00;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>x: &amp;&apos;a i32,
+&#x305D;&#x3057;&#x3066;&#x305D;&#x308C;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002; &#x305D;&#x308C;&#x3067;&#x306F;&#x306A;&#x305C;&#x3053;&#x3053;&#x3067;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x5FC5;&#x8981;&#x3068;&#x3059;&#x308B;&#x306E;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002; Foo &#x3078;&#x306E;&#x5168;&#x3066;&#x306E;&#x53C2;&#x7167;&#x304C;&#x305D;&#x308C;&#x306E;&#x542B;&#x3080; i32 &#x3078;&#x306E;&#x53C2;&#x7167;&#x3088;&#x308A;&#x9577;&#x3044;&#x9593;&#x6709;&#x52B9;&#x306B;&#x306F;&#x306A;&#x3089;&#x306A;&#x3044;&#x3053;&#x3068;&#x3092;&#x4FDD;&#x8A3C;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;</p>
+<p>impl &#x30D6;&#x30ED;&#x30C3;&#x30AF;
+Foo &#x306B;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>struct Foo&lt;&apos;a&gt; {
+    x: &amp;&apos;a i32,
+}</p>
+<p>impl&lt;&apos;a&gt; Foo&lt;&apos;a&gt; {
+    fn x(&amp;self) -&gt; &amp;&apos;a i32 { self.x }
+}</p>
+<p>fn main() {
+    let y = &amp;5; // &#x3053;&#x308C;&#x306F;<code>let _y = 5; let y = &amp;_y;</code>&#x3068;&#x540C;&#x3058;
+    let f = Foo { x: y };</p>
+<pre><code>println!(&quot;x is: {}&quot;, f.x());
+</code></pre><p>}
+&#x898B;&#x3066;&#x306E;&#x3068;&#x304A;&#x308A;&#x3001; Foo &#x306E;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306F; impl &#x884C;&#x3067;&#x5BA3;&#x8A00;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002; &#x3061;&#x3087;&#x3046;&#x3069;&#x95A2;&#x6570;&#x306E;&#x3068;&#x304D;&#x306E;&#x3088;&#x3046;&#x306B; &apos;a &#x306F;2&#x56DE;&#x7E70;&#x308A;&#x8FD4;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;&#x3001; impl&lt;&apos;a&gt; &#x306F;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0; &apos;a &#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x3001; Foo&lt;&apos;a&gt; &#x306F;&#x305D;&#x308C;&#x3092;&#x4F7F;&#x3046;&#x306E;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x8907;&#x6570;&#x306E;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;
+&#x3082;&#x3057;&#x8907;&#x6570;&#x306E;&#x53C2;&#x7167;&#x304C;&#x3042;&#x308C;&#x3070;&#x3001;&#x540C;&#x3058;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x8907;&#x6570;&#x56DE;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p>fn x_or_y&lt;&apos;a&gt;(x: &amp;&apos;a str, y: &amp;&apos;a str) -&gt; &amp;&apos;a str {
+&#x3053;&#x308C;&#x306F; x &#x3068; y &#x304C;&#x4E21;&#x65B9;&#x3068;&#x3082;&#x540C;&#x3058;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x3067;&#x6709;&#x52B9;&#x3067;&#x3042;&#x308A;&#x3001;&#x623B;&#x308A;&#x5024;&#x3082;&#x305D;&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x3067;&#x6709;&#x52B9;&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3092;&#x793A;&#x3057;&#x307E;&#x3059;&#x3002; &#x3082;&#x3057; x &#x3068; y &#x306B;&#x9055;&#x3046;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x6301;&#x305F;&#x305B;&#x305F;&#x3044;&#x306E;&#x3067;&#x3042;&#x308C;&#x3070;&#x3001;&#x8907;&#x6570;&#x306E;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p>fn x_or_y&lt;&apos;a, &apos;b&gt;(x: &amp;&apos;a str, y: &amp;&apos;b str) -&gt; &amp;&apos;a str {
+&#x3053;&#x306E;&#x4F8B;&#x3067;&#x306F; x &#x3068; y &#x304C;&#x7570;&#x306A;&#x308B;&#x6709;&#x52B9;&#x306A;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x304C;&#x3001;&#x623B;&#x308A;&#x5024;&#x306F; x &#x3068;&#x540C;&#x3058;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306E;&#x8003;&#x3048;&#x65B9;
+&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306B;&#x3064;&#x3044;&#x3066;&#x8003;&#x3048;&#x308B;&#x306B;&#x306F;&#x3001;&#x53C2;&#x7167;&#x306E;&#x6709;&#x52B9;&#x306A;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x3092;&#x53EF;&#x8996;&#x5316;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002; &#x4F8B;&#x3048;&#x3070;&#x3053;&#x3046;&#x3067;&#x3059;&#x3002;</p>
+<p>fn main() {
+    let y = &amp;5;     // -+ y&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x5165;&#x308B;
+                    //  |
+    // stuff        //  |
+                    //  |
+}                   // -+ y&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x304B;&#x3089;&#x51FA;&#x308B;
+Foo &#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x3068;&#x3053;&#x3046;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>struct Foo&lt;&apos;a&gt; {
+    x: &amp;&apos;a i32,
+}</p>
+<p>fn main() {
+    let y = &amp;5;           // -+ y&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x5165;&#x308B;
+    let f = Foo { x: y }; // -+ f&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x5165;&#x308B;
+    // stuff              //  |
+                          //  |
+}                         // -+ f&#x3068;y&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x304B;&#x3089;&#x51FA;&#x308B;
+f &#x306F; y &#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306E;&#x4E2D;&#x3067;&#x6709;&#x52B9;&#x306A;&#x306E;&#x3067;&#x3001;&#x5168;&#x3066;&#x52D5;&#x304D;&#x307E;&#x3059;&#x3002; &#x3082;&#x3057;&#x305D;&#x308C;&#x304C;&#x305D;&#x3046;&#x3067;&#x306F;&#x306A;&#x304B;&#x3063;&#x305F;&#x3089;&#x3069;&#x3046;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002; &#x3053;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x306F;&#x52D5;&#x304B;&#x306A;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>struct Foo&lt;&apos;a&gt; {
+    x: &amp;&apos;a i32,
+}</p>
+<p>fn main() {
+    let x;                    // -+ x&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x5165;&#x308B;
+                              //  |
+    {                         //  |
+        let y = &amp;5;           // ---+ y&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x5165;&#x308B;
+        let f = Foo { x: y }; // ---+ f&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x5165;&#x308B;
+        x = &amp;f.x;             //  | | &#x3053;&#x3053;&#x3067;&#x30A8;&#x30E9;&#x30FC;&#x304C;&#x8D77;&#x304D;&#x308B;
+    }                         // ---+ f&#x3068;y&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x304B;&#x3089;&#x51FA;&#x308B;
+                              //  |
+    println!(&quot;{}&quot;, x);        //  |
+}                             // -+ x&#x304C;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x304B;&#x3089;&#x51FA;&#x308B;
+&#x3075;&#x3046;! &#x898B;&#x3066;&#x306E;&#x3068;&#x304A;&#x308A;&#x3001;&#x3053;&#x3053;&#x3067;&#x306F; f &#x3068; y &#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306F; x &#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x3088;&#x308A;&#x3082;&#x5C0F;&#x3055;&#x3044;&#x3067;&#x3059;&#x3002; &#x3057;&#x304B;&#x3057; x = &amp;f.x &#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x3068;&#x304D;&#x3001; x &#x3092;&#x307E;&#x3055;&#x306B;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x304B;&#x3089;&#x5916;&#x308C;&#x305F;&#x4F55;&#x304B;&#x306E;&#x53C2;&#x7167;&#x306B;&#x3057;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x540D;&#x524D;&#x306E;&#x4ED8;&#x3044;&#x305F;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306F;&#x305D;&#x308C;&#x3089;&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x540D;&#x524D;&#x3092;&#x4E0E;&#x3048;&#x308B;&#x65B9;&#x6CD5;&#x3067;&#x3059;&#x3002; &#x4F55;&#x304B;&#x306B;&#x540D;&#x524D;&#x3092;&#x4E0E;&#x3048;&#x308B;&#x3053;&#x3068;&#x306F;&#x305D;&#x308C;&#x306B;&#x3064;&#x3044;&#x3066;&#x8A71;&#x3092;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x305F;&#x3081;&#x306E;&#x6700;&#x521D;&#x306E;&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#x3067;&#x3059;&#x3002;</p>
+<p>&apos;static
+&#x300C;static&#x300D;&#x3068;&#x540D;&#x4ED8;&#x3051;&#x3089;&#x308C;&#x305F;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306F;&#x7279;&#x5225;&#x306A;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3067;&#x3059;&#x3002; &#x305D;&#x308C;&#x306F;&#x4F55;&#x304B;&#x304C;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x5168;&#x4F53;&#x306B;&#x6E21;&#x308B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x6301;&#x3064;&#x3053;&#x3068;&#x3092;&#x793A;&#x3057;&#x307E;&#x3059;&#x3002; &#x307B;&#x3068;&#x3093;&#x3069;&#x306E;Rust&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DE;&#x304C;&#x6700;&#x521D;&#x306B; &apos;static &#x306B;&#x51FA;&#x4F1A;&#x3046;&#x306E;&#x306F;&#x3001;&#x6587;&#x5B57;&#x5217;&#x3092;&#x6271;&#x3046;&#x3068;&#x304D;&#x3067;&#x3059;&#x3002;</p>
+<p>let x: &amp;&apos;static str = &quot;Hello, world.&quot;;
+&#x6587;&#x5B57;&#x5217;&#x30EA;&#x30C6;&#x30E9;&#x30EB;&#x306F; &amp;&apos;static str &#x578B;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x3001;&#x53C2;&#x7167;&#x304C;&#x5E38;&#x306B;&#x6709;&#x52B9;&#x3060;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;&#x305D;&#x308C;&#x3089;&#x306F;&#x6700;&#x7D42;&#x7684;&#x306A;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x30BB;&#x30B0;&#x30E1;&#x30F3;&#x30C8;&#x306B;&#x713C;&#x304D;&#x4ED8;&#x3051;&#x3089;&#x308C;&#x307E;&#x3059;&#x3002; &#x3082;&#x3046;1&#x3064;&#x306E;&#x4F8B;&#x306F;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x3067;&#x3059;&#x3002;</p>
+<p>static FOO: i32 = 5;
+let x: &amp;&apos;static i32 = &amp;FOO;
+&#x3053;&#x308C;&#x306F;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x30BB;&#x30B0;&#x30E1;&#x30F3;&#x30C8;&#x306B; i32 &#x3092;&#x8FFD;&#x52A0;&#x3057;&#x307E;&#x3059;&#x3002;&#x305D;&#x3057;&#x3066;&#x3001; x &#x306F;&#x305D;&#x308C;&#x3078;&#x306E;&#x53C2;&#x7167;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306E;&#x7701;&#x7565;
+Rust&#x306F;&#x95A2;&#x6570;&#x672C;&#x4F53;&#x306E;&#x90E8;&#x5206;&#x3067;&#x306F;&#x5F37;&#x529B;&#x306A;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x578B;&#x63A8;&#x8AD6;&#x3092;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x307E;&#x3059;&#x3002;&#x3057;&#x304B;&#x3057;&#x8981;&#x7D20;&#x306E;&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x306E;&#x90E8;&#x5206;&#x3067;&#x306F;&#x3001;&#x578B;&#x304C;&#x8981;&#x7D20;&#x306E;&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x3060;&#x3051;&#x3067;&#x308F;&#x304B;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x3001;&#xFF08;&#x578B;&#x63A8;&#x8AD6;&#x304C;&#xFF09;&#x8A31;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002; &#x3068;&#x306F;&#x3044;&#x3048;&#x3001;&#x30A8;&#x30EB;&#x30B4;&#x30CE;&#x30DF;&#x30C3;&#x30AF;&#xFF08;&#x4EBA;&#x9593;&#x306B;&#x3068;&#x3063;&#x3066;&#x306E;&#x6271;&#x3044;&#x3084;&#x3059;&#x3055;&#xFF09;&#x306E;&#x7406;&#x7531;&#x306B;&#x3088;&#x308A;&#x3001;&quot;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306E;&#x7701;&#x7565;&quot;&#x3068;&#x547C;&#x3070;&#x308C;&#x3066;&#x3044;&#x308B;&#x3001;&#x975E;&#x5E38;&#x306B;&#x5236;&#x9650;&#x3055;&#x308C;&#x305F;&#x7B2C;&#x4E8C;&#x306E;&#x63A8;&#x8AD6;&#x30A2;&#x30EB;&#x30B4;&#x30EA;&#x30BA;&#x30E0;&#x304C;&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x306E;&#x90E8;&#x5206;&#x306B;&#x9069;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002; &#x305D;&#x306E;&#x63A8;&#x8AD6;&#x306F;&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x306E;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3060;&#x3051;&#x306B;&#x57FA;&#x3065;&#x304D;&#x3001;&#x95A2;&#x6570;&#x672C;&#x4F53;&#x306B;&#x306F;&#x57FA;&#x3065;&#x304B;&#x305A;&#x3001;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3060;&#x3051;&#x3092;&#x63A8;&#x8AD6;&#x3057;&#x307E;&#x3059;&#x3002;&#x305D;&#x3057;&#x3066;&#x305F;&#x3063;&#x305F;3&#x3064;&#x306E;&#x899A;&#x3048;&#x3084;&#x3059;&#x304F;&#x660E;&#x78BA;&#x306A;&#x30EB;&#x30FC;&#x30EB;&#x306B;&#x5F93;&#x3063;&#x3066;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002; &#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306E;&#x7701;&#x7565;&#x3067;&#x8981;&#x7D20;&#x306E;&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x3092;&#x77ED;&#x304F;&#x66F8;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x3057;&#x304B;&#x3057;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x578B;&#x63A8;&#x8AD6;&#x304C;&#x9069;&#x7528;&#x3055;&#x308C;&#x308B;&#x3068;&#x304D;&#x306E;&#x3088;&#x3046;&#x306B;&#x5B9F;&#x969B;&#x306E;&#x578B;&#x3092;&#x96A0;&#x3059;&#x3053;&#x3068;&#x306F;&#x3067;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+<p>&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306E;&#x7701;&#x7565;&#x306B;&#x3064;&#x3044;&#x3066;&#x8A71;&#x3059;&#x3068;&#x304D;&#x306B;&#x306F;&#x3001; &#x5165;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0; &#x3068; &#x51FA;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0; &#x3068;&#x3044;&#x3046;&#x7528;&#x8A9E;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002; &#x5165;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0; &#x306F;&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;&#x306B;&#x95A2;&#x9023;&#x3059;&#x308B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3067;&#x3001; &#x51FA;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0; &#x306F;&#x95A2;&#x6570;&#x306E;&#x623B;&#x308A;&#x5024;&#x306B;&#x95A2;&#x9023;&#x3059;&#x308B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3067;&#x3059;&#x3002; &#x4F8B;&#x3048;&#x3070;&#x3001;&#x6B21;&#x306E;&#x95A2;&#x6570;&#x306F;&#x5165;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x3002;</p>
+<p>fn foo&lt;&apos;a&gt;(bar: &amp;&apos;a str)
+&#x3053;&#x306E;&#x95A2;&#x6570;&#x306F;&#x51FA;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x3002;</p>
+<p>fn foo&lt;&apos;a&gt;() -&gt; &amp;&apos;a str
+&#x3053;&#x306E;&#x95A2;&#x6570;&#x306F;&#x4E21;&#x65B9;&#x306E;&#x4F4D;&#x7F6E;&#x306E;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x3002;</p>
+<p>fn foo&lt;&apos;a&gt;(bar: &amp;&apos;a str) -&gt; &amp;&apos;a str
+&#x3053;&#x308C;&#x304C;3&#x3064;&#x306E;&#x30EB;&#x30FC;&#x30EB;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;&#x306E;&#x4E2D;&#x306E;&#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x5404;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306F;&#x4E92;&#x3044;&#x306B;&#x7570;&#x306A;&#x308B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x306B;&#x306A;&#x308B;
+&#x3082;&#x3057;&#x5165;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x304C;1&#x3064;&#x3060;&#x3051;&#x306A;&#x3089;&#x3070;&#x3001;&#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x304B;&#x3069;&#x3046;&#x304B;&#x306B;&#x304B;&#x304B;&#x308F;&#x3089;&#x305A;&#x3001;&#x305D;&#x306E;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306F;&#x305D;&#x306E;&#x95A2;&#x6570;&#x306E;&#x623B;&#x308A;&#x5024;&#x306E;&#x4E2D;&#x306E;&#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x5168;&#x3066;&#x306B;&#x5272;&#x308A;&#x5F53;&#x3066;&#x3089;&#x308C;&#x308B;
+&#x3082;&#x3057;&#x5165;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x304C;&#x8907;&#x6570;&#x3042;&#x308B;&#x304C;&#x3001;&#x305D;&#x306E;1&#x3064;&#x304C; &amp;self &#x53C8;&#x306F; &amp;mut self &#x3067;&#x3042;&#x308C;&#x3070;&#x3001; self &#x306E;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306F;&#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x51FA;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x5168;&#x3066;&#x306B;&#x5272;&#x308A;&#x5F53;&#x3066;&#x3089;&#x308C;&#x308B;
+&#x305D;&#x3046;&#x3067;&#x306A;&#x3044;&#x3068;&#x304D;&#x306F;&#x3001;&#x51FA;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306E;&#x7701;&#x7565;&#x306F;&#x30A8;&#x30E9;&#x30FC;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x4F8B;</p>
+<p>&#x3053;&#x3053;&#x306B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306E;&#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x95A2;&#x6570;&#x306E;&#x4F8B;&#x3092;&#x793A;&#x3057;&#x307E;&#x3059;&#x3002; &#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x306E;&#x5404;&#x4F8B;&#x3092;&#x305D;&#x306E;&#x5C55;&#x958B;&#x3057;&#x305F;&#x5F62;&#x5F0F;&#x3068;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>fn print(s: &amp;str); // &#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x5F62;
+fn print&lt;&apos;a&gt;(s: &amp;&apos;a str); // &#x5C55;&#x958B;&#x3057;&#x305F;&#x5F62;</p>
+<p>fn debug(lvl: u32, s: &amp;str); // &#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x5F62;
+fn debug&lt;&apos;a&gt;(lvl: u32, s: &amp;&apos;a str); // &#x5C55;&#x958B;&#x3055;&#x308C;&#x305F;&#x5F62;</p>
+<p>// &#x524D;&#x8FF0;&#x306E;&#x4F8B;&#x3067;&#x306F;<code>lvl</code>&#x306F;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x5FC5;&#x8981;&#x3068;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x3001;&#x305D;&#x308C;&#x306F;&#x53C2;&#x7167;&#xFF08;<code>&amp;</code>&#xFF09;
+// &#x3067;&#x306F;&#x306A;&#x3044;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;&#xFF08;&#x53C2;&#x7167;&#x3092;&#x542B;&#x3080;<code>struct</code>&#x306E;&#x3088;&#x3046;&#x306A;&#xFF09;&#x53C2;&#x7167;&#x306B;&#x95A2;&#x4FC2;&#x3059;&#x308B;&#x3082;&#x306E;&#x3060;&#x3051;&#x304C;&#x30E9;&#x30A4;
+// &#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x3092;&#x5FC5;&#x8981;&#x3068;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>fn substr(s: &amp;str, until: u32) -&gt; &amp;str; // &#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x5F62;
+fn substr&lt;&apos;a&gt;(s: &amp;&apos;a str, until: u32) -&gt; &amp;&apos;a str; // &#x5C55;&#x958B;&#x3055;&#x308C;&#x305F;&#x5F62;</p>
+<p>fn get_str() -&gt; &amp;str; // &#x4E0D;&#x6B63;&#x3002;&#x5165;&#x529B;&#x304C;&#x306A;&#x3044;</p>
+<p>fn frob(s: &amp;str, t: &amp;str) -&gt; &amp;str; // &#x4E0D;&#x6B63;&#x3002;&#x5165;&#x529B;&#x304C;2&#x3064;&#x3042;&#x308B;
+fn frob&lt;&apos;a, &apos;b&gt;(s: &amp;&apos;a str, t: &amp;&apos;b str) -&gt; &amp;str; // &#x5C55;&#x958B;&#x3055;&#x308C;&#x305F;&#x5F62;&#x3002;&#x51FA;&#x529B;&#x30E9;&#x30A4;&#x30D5;&#x30BF;&#x30A4;&#x30E0;&#x304C;&#x6C7A;&#x307E;&#x3089;&#x306A;&#x3044;</p>
+<p>fn get_mut(&amp;mut self) -&gt; &amp;mut T; // &#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x5F62;
+fn get_mut&lt;&apos;a&gt;(&amp;&apos;a mut self) -&gt; &amp;&apos;a mut T; // &#x5C55;&#x958B;&#x3055;&#x308C;&#x305F;&#x5F62;</p>
+<p>fn args<t:tocstr>(&amp;mut self, args: &amp;[T]) -&gt; &amp;mut Command; // &#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x5F62;
+fn args&lt;&apos;a, &apos;b, T:ToCStr&gt;(&amp;&apos;a mut self, args: &amp;&apos;b [T]) -&gt; &amp;&apos;a mut Command; // &#x5C55;&#x958B;&#x3055;&#x308C;&#x305F;&#x5F62;</t:tocstr></p>
+<p>fn new(buf: &amp;mut [u8]) -&gt; BufWriter; // &#x7701;&#x7565;&#x3055;&#x308C;&#x305F;&#x5F62;
+fn new&lt;&apos;a&gt;(buf: &amp;&apos;a mut [u8]) -&gt; BufWriter&lt;&apos;a&gt;; // &#x5C55;&#x958B;&#x3055;&#x308C;&#x305F;&#x5F62;</p>
 
                                 
                                 </section>
@@ -342,7 +502,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ライフタイム","level":"1.13","depth":1,"previous":{"title":"借用","level":"1.12","depth":1,"path":"borrowing.md","ref":"borrowing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"lifetime.md","mtime":"2017-02-23T14:25:07.880Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-23T14:25:23.939Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ライフタイム","level":"1.13","depth":1,"previous":{"title":"借用","level":"1.12","depth":1,"path":"borrowing.md","ref":"borrowing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"lifetime.md","mtime":"2017-02-24T06:53:02.069Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-24T06:53:34.696Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

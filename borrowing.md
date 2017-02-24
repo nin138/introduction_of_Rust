@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="./css/reset.css">
-<a class="forkme" href="https://yanokunpei.github.io/introduction_of_Rust">Fork me on GitHub</a>
 # 参照と借用
 ## 借用
 もし関数で所有権を返さなければならないのであれば、こうなります。

@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="./css/reset.css">
-<a class="forkme" href="https://yanokunpei.github.io/introduction_of_Rust">Fork me on GitHub</a>
 # 変数
 Rustでは変数宣言に`let`を使います。
 ```Rust
