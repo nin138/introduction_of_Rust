@@ -18,3 +18,4 @@
 * [列挙型](enum.md)
 * [match](match.md)
 * [パターン](pattern.md)
+* [メソッド構文](method_syntax.md)
