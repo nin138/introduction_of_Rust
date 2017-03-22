@@ -15,3 +15,4 @@
 * [借用](borrowing.md)
 * [ライフタイム](lifetime.md)
 * [構造体](struct.md)
+* [列挙型](enum.md)

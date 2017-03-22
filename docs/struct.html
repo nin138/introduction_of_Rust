@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="enum.html" />
+    
     
     <link rel="prev" href="lifetime.html" />
     
@@ -282,6 +284,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.16" data-path="enum.html">
+            
+                <a href="enum.html">
+            
+                    
+                    列挙型
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -328,7 +343,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x69CB;&#x9020;&#x4F53;">&#x69CB;&#x9020;&#x4F53;</h1>
-<p>struct &#x306F;&#x3088;&#x308A;&#x8907;&#x96D1;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3092;&#x4F5C;&#x308B;&#x65B9;&#x6CD5;&#x306E;1&#x3064;&#x3067;&#x3059;&#x3002;2&#x6B21;&#x5143;&#x7A7A;&#x9593;&#x306E;&#x5EA7;&#x6A19;&#x306B;&#x95A2;&#x3059;&#x308B;&#x8A08;&#x7B97;&#x3092;&#x884C;&#x3063;&#x3066;&#x3044;&#x308B;&#x3068;&#x3057;&#x3066;&#x3001;x &#x3068; y &#x3001;&#x4E21;&#x65B9;&#x306E;&#x5024;&#x3092;&#x307E;&#x3068;&#x3081;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p><code>struct</code>&#x306F;&#x3088;&#x308A;&#x8907;&#x96D1;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3092;&#x4F5C;&#x308B;&#x65B9;&#x6CD5;&#x306E;1&#x3064;&#x3067;&#x3059;&#x3002;</p>
 <pre><code class="lang-Rust"><span class="hljs-keyword">let</span> origin_x = <span class="hljs-number">0</span>;
 <span class="hljs-keyword">let</span> origin_y = <span class="hljs-number">0</span>;
 </code></pre>
@@ -460,10 +475,14 @@ struct Point(i32, i32, i32);
 
             
                 
-                <a href="lifetime.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ライフタイム">
+                <a href="lifetime.html" class="navigation navigation-prev " aria-label="Previous page: ライフタイム">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="enum.html" class="navigation navigation-next " aria-label="Next page: 列挙型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -472,7 +491,7 @@ struct Point(i32, i32, i32);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"構造体","level":"1.15","depth":1,"previous":{"title":"ライフタイム","level":"1.14","depth":1,"path":"lifetime.md","ref":"lifetime.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"struct.md","mtime":"2017-03-22T05:30:30.662Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-22T05:35:48.003Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"構造体","level":"1.15","depth":1,"next":{"title":"列挙型","level":"1.16","depth":1,"path":"enum.md","ref":"enum.md","articles":[]},"previous":{"title":"ライフタイム","level":"1.14","depth":1,"path":"lifetime.md","ref":"lifetime.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"struct.md","mtime":"2017-03-22T05:38:11.592Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-22T06:45:42.164Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
