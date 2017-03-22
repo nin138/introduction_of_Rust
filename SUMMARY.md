@@ -16,3 +16,4 @@
 * [ライフタイム](lifetime.md)
 * [構造体](struct.md)
 * [列挙型](enum.md)
+* [match](match.md)
