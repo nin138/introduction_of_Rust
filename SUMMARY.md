@@ -20,5 +20,6 @@
 * [パターン](pattern.md)
 * [メソッド構文](method_syntax.md)
 * [文字列](string.md)
+* [ジェネリクス](generics.md)
 ---
 * [format!, print!, println!](formatted_print.md)
