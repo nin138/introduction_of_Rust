@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="string.html" />
+    
     
     <link rel="prev" href="pattern.html" />
     
@@ -334,6 +336,39 @@
             
         </li>
     
+        <li class="chapter " data-level="1.20" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    文字列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="formatted_print.html">
+            
+                <a href="formatted_print.html">
+            
+                    
+                    format!, print!, println!
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -564,7 +599,8 @@
     <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;y: {}&quot;</span>, c.y);
 }
 </code></pre>
-<p>&#x3053;&#x3053;&#x3067;&#x306F;&#x3082;&#x3046;1&#x3064;&#x306E; struct &#x3067;&#x3042;&#x308B; CircleBuilder &#x3092;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x305D;&#x306E;&#x4E2D;&#x306B;Builder&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&#x307E;&#x305F; Circle &#x306B; area() &#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002; &#x305D;&#x3057;&#x3066; CircleBuilder &#x306B;&#x3082;&#x3046;1&#x3064; finalize() &#x3068;&#x3044;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x4F5C;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;&#x3053;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;Builder&#x304B;&#x3089;&#x6700;&#x7D42;&#x7684;&#x306A; Circle &#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;&#x3055;&#x3066;&#x3001;&#x5148;&#x7A0B;&#x306E;&#x8981;&#x6C42;&#x3092;&#x5B9F;&#x65BD;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x578B;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3057;&#x305F;&#x3002; CircleBuilder &#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x597D;&#x304D;&#x306A;&#x3088;&#x3046;&#x306B;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3001;&#x4F5C;&#x308B; Circle &#x3078;&#x306E;&#x5236;&#x7D04;&#x3092;&#x4E0E;&#x3048;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x3053;&#x3053;&#x3067;&#x306F;&#x3082;&#x3046;1&#x3064;&#x306E; struct &#x3067;&#x3042;&#x308B; CircleBuilder &#x3092;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x305D;&#x306E;&#x4E2D;&#x306B;Builder&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&#x307E;&#x305F; Circle &#x306B; area() &#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002; &#x305D;&#x3057;&#x3066; CircleBuilder &#x306B;&#x3082;&#x3046;1&#x3064; finalize() &#x3068;&#x3044;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x4F5C;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;&#x3053;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;Builder&#x304B;&#x3089;&#x6700;&#x7D42;&#x7684;&#x306A; Circle &#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;
+CircleBuilder &#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x597D;&#x304D;&#x306A;&#x3088;&#x3046;&#x306B;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3001;&#x4F5C;&#x308B; Circle &#x3078;&#x306E;&#x5236;&#x7D04;&#x3092;&#x4E0E;&#x3048;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
 
                                 
                                 </section>
@@ -592,10 +628,14 @@
 
             
                 
-                <a href="pattern.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: パターン">
+                <a href="pattern.html" class="navigation navigation-prev " aria-label="Previous page: パターン">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="string.html" class="navigation navigation-next " aria-label="Next page: 文字列">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -604,7 +644,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"メソッド構文","level":"1.19","depth":1,"previous":{"title":"パターン","level":"1.18","depth":1,"path":"pattern.md","ref":"pattern.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"method_syntax.md","mtime":"2017-03-22T09:45:59.678Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-22T09:46:19.015Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"メソッド構文","level":"1.19","depth":1,"next":{"title":"文字列","level":"1.20","depth":1,"path":"string.md","ref":"string.md","articles":[]},"previous":{"title":"パターン","level":"1.18","depth":1,"path":"pattern.md","ref":"pattern.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"method_syntax.md","mtime":"2017-03-24T02:42:24.049Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-19T03:00:55.519Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

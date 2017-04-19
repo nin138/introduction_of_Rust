@@ -203,4 +203,5 @@ fn main() {
     println!("y: {}", c.y);
 }
 ```
-ここではもう1つの struct である CircleBuilder を作成しています。その中にBuilderメソッドを定義しました。また Circle に area() メソッドを定義しました。 そして CircleBuilder にもう1つ finalize() というメソッドを作りました。このメソッドはBuilderから最終的な Circle を作成します。さて、先程の要求を実施するために型システムを使いました。 CircleBuilder のメソッドを好きなように組み合わせ、作る Circle への制約を与えることができます。
+ここではもう1つの struct である CircleBuilder を作成しています。その中にBuilderメソッドを定義しました。また Circle に area() メソッドを定義しました。 そして CircleBuilder にもう1つ finalize() というメソッドを作りました。このメソッドはBuilderから最終的な Circle を作成します。
+CircleBuilder のメソッドを好きなように組み合わせ、作る Circle への制約を与えることができます。

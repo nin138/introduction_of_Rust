@@ -1,17 +1,17 @@
 # インストール
 ## LinuxまたはMacでのインストール
+RustコンパイラとそのパッケージマネージャCargoをダウンロードし、`/usr/local`
+へとインストールする。
 ```
 $ curl https://sh.rustup.rs -sSf | sh
 ```
-このスクリプトはRustコンパイラとそのパッケージマネージャCargoをダウンロードし、`/usr/local`
-へとインストールします。  
-`--prefix=<path>` オプションを使うことで他の場所へインストール出来ます。  
+`--prefix=<path>` オプションを使うことで他の場所へインストール出来る。  
 インストーラは「sudo」下で走る。もし'sudo'を使ってほしくないなら`--disable-sudo` を使う。
 
 ## Windowsでのインストール
-Windowsを使っているなら適切なインストーラをダウンロードして下さい。  
-`https://www.rust-lang.org/en-US/`  
+インストーラをダウンロードする。  
+[https://www.rust-lang.org/en-US/]  
 
 またlink.exeが見つからないとか言われた場合は  
-`https://www.microsoft.com/ja-jp/download/details.aspx?id=48146`  
-からMicrosoft Visual Studio Community 2015をC++の項目にチェックをつけてインストールしまししょう。
+[https://www.visualstudio.com/ja/downloads/?rr=https%3A%2F%2Fwww.microsoft.com%2Fja-jp%2Fdev%2Fproducts%2Fcommunity.aspx]  
+からMicrosoft Visual Studio CommunityをC++の項目にチェックをつけてインストールする。

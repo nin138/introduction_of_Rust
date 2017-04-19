@@ -336,6 +336,39 @@
             
         </li>
     
+        <li class="chapter " data-level="1.20" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    文字列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="formatted_print.html">
+            
+                <a href="formatted_print.html">
+            
+                    
+                    format!, print!, println!
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -412,9 +445,9 @@
 </code></pre>
 <hr>
 <h2 id="char">char</h2>
-<p>char&#x578B;&#x306F;&#x30E6;&#x30CB;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30B9;&#x30AB;&#x30E9;&#x5024;&#x3067;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;Rust&#x306E;char &#x306F;4&#x30D0;&#x30A4;&#x30C8;&#x3067;&#x3059;&#x3002;<br> char&#x306F;<code>&apos;</code>&#x3067;&#x56F2;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<pre><code class="lang-Rust"><span class="hljs-keyword">let</span> x = <span class="hljs-string">&apos;x&apos;</span>;
-<span class="hljs-keyword">let</span> two_hearts = &apos;&#x1F495;&apos;;
+<p><code>char</code>&#x306F;&#x30E6;&#x30CB;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3068;&#x4E00;&#x5BFE;&#x4E00;&#x306B;&#x5BFE;&#x5FDC;&#x3059;&#x3002;Rust&#x306E;char &#x306F;4&#x30D0;&#x30A4;&#x30C8;&#x3067;&#x3059;&#x3002;<br> char&#x306F;<code>&apos;</code>&#x3067;&#x56F2;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Rust"><span class="hljs-keyword">let</span> c = <span class="hljs-string">&apos;a&apos;</span>;
+<span class="hljs-built_in">assert_eq!</span>(c <span class="hljs-keyword">as</span> <span class="hljs-keyword">u32</span>, <span class="hljs-number">0x61</span>);  <span class="hljs-comment">// 32bit&#x6574;&#x6570;&#x306B;&#x30AD;&#x30E3;&#x30B9;&#x30C8;&#x51FA;&#x6765;&#x308B;</span>
 </code></pre>
 <hr>
 <h2 id="bool">bool</h2>
@@ -518,7 +551,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"プリミティブ型","level":"1.7","depth":1,"next":{"title":"コメント","level":"1.8","depth":1,"path":"comment.md","ref":"comment.md","articles":[]},"previous":{"title":"関数","level":"1.6","depth":1,"path":"function.md","ref":"function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"primitive.md","mtime":"2017-02-23T14:31:15.154Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-22T09:46:19.015Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"プリミティブ型","level":"1.7","depth":1,"next":{"title":"コメント","level":"1.8","depth":1,"path":"comment.md","ref":"comment.md","articles":[]},"previous":{"title":"関数","level":"1.6","depth":1,"path":"function.md","ref":"function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"primitive.md","mtime":"2017-04-18T01:29:53.018Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-19T03:00:55.519Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
